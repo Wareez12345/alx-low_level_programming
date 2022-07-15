@@ -4,7 +4,6 @@
 * @s: char array string type
 * Return: s transformed
 */
-
 char *leet(char *s)
 {
 int i, ii;
