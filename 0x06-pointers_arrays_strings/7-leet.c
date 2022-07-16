@@ -1,28 +1,23 @@
 #include "main.h"
-
 /**
- * leet - transform to leet
- * @s: char array string type
- * Return: s transformed
- */
-char *leet(char *s)
-{
-int i, ii;
-char s1[] = "aeotl";
-char s1[] = "AEOTL";
-char s2[] = "43071";
+* leet - function that encode a string
+*@str:string that will be encode
+*Return:returns encode string
+*/
 
-for (i = 0; s[i] != '\0'; i++)
+char *leet(char *str)
 {
-for (ii = 0; ii < 5; ii++)
-{
-if (s[i] == s1[ii] || s[i] == S1[ii])
-{
-s[i] = s2[ii];
-break;
-}
-}
-}
+	int index = 0, index2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-return (s);
+	while (str[++index1])
+	{
+		for (index2 = 0; index2 <= 7; index2++)
+		{
+			if (str[index1] == leet[index2] ||
+			str[index1] - 32 == leet[index2])
+				str[index1] = index2 + '0';
+		}
+	}
+	return (str);
 }
